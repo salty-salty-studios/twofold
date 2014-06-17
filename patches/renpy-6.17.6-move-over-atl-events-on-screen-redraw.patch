@@ -1,0 +1,49 @@
+diff --git a/renpy/display/behavior.py b/renpy/display/behavior.py
+index 7ae4ea7..959e6ad 100644
+--- a/renpy/display/behavior.py
++++ b/renpy/display/behavior.py
+@@ -563,7 +563,7 @@ class Button(renpy.display.layout.Window):
+         self.unhovered = unhovered
+         self.alternate = alternate
+ 
+-        self.focusable = clicked is not None
++        self.focusable = (clicked is not None) or (action is not None)
+         self.role = role
+         self.keymap = keymap
+ 
+diff --git a/renpy/ui.py b/renpy/ui.py
+index cf01f12..bdb57b6 100644
+--- a/renpy/ui.py
++++ b/renpy/ui.py
+@@ -180,12 +180,12 @@ class ChildOrFixed(Addable):
+         stack.pop()
+ 
+         if len(self.queue) == 1:
+-            add(self.queue[0])
++            implicit_add(self.queue[0])
+         else:
+             fixed()
+ 
+             for i in self.queue:
+-                add(i)
++                implicit_add(i)
+ 
+             close()
+ 
+@@ -564,6 +564,16 @@ def _add(d, **kwargs):
+ 
+ add = Wrapper(_add)
+ 
++def _implicit_add(d):
++    """
++    A faster version of add to use when we know `d` is a displayable and isn't
++    transformed.
++    """
++
++    return d
++
++implicit_add = Wrapper(_implicit_add)
++
+ def _image(im, **properties):
+     d = renpy.display.im.image(im, loose=True, **properties)
+     d = d.parameterize('displayable', [ ])

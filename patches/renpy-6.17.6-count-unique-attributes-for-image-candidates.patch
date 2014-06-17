@@ -1,0 +1,14 @@
+diff --git a/renpy/display/image.py b/renpy/display/image.py
+index 5cc4d3a..41174ff 100644
+--- a/renpy/display/image.py
++++ b/renpy/display/image.py
+@@ -363,7 +363,7 @@ class ShownImageInfo(renpy.object.Object):
+                 if num_required != len(required):
+                     continue
+
+-                len_attrs = len(attrs)
++                len_attrs = len(set(attrs))
+
+                 if len_attrs < max_len:
+                     continue
+
