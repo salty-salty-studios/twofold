@@ -102,7 +102,7 @@ Any person(s) (further referred to as "end-user") who wishes to modify and redis
 * No credit is claimed or implied by the end-user for assets made by those other than themselves. Note: Modifying any asset does not change who the original creator is. In order to assert that an asset is the end-user's, they must create it themselves. Additionally, creating an asset in the exact likeness of another does not entitle you to claim said asset as your own. Plagiarizing any pre-existing assets will not change ownership of said asset.
 * Any derivative work must be transparent about the fact that it is a derivative work of Work in Progress and not claim to be anything else.
 * Any derivative work must be transparent about the fact that it is not an official release of Work in Progress by Salty Salty Studios, and mark itself as such.
-* All of of Work in Progress' original assets (modified or unmodified) will maintain their licenses and clauses when redistributed in a derivative work.
+* All of Work in Progress' original assets (modified or unmodified) will maintain their licenses and clauses when redistributed in a derivative work.
 
 Both the derivative work and all the assets themselves should follow the terms both set forth in the Creative Commons BY-NC 4.0 license, this additional waiver, and be licensed under the Creative Commons BY-NC-ND 4.0 license WITH this waiver.
 
