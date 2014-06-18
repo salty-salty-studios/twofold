@@ -7,8 +7,7 @@ label scene_init:
 
         available_languages = collections.OrderedDict({
             # 'directory': ('English language name', 'Native language name')
-            'en': ('English', 'English'),
-            'fr': ('French', 'Français')
+            'en': ('English', 'English')
         })
 
         sprite_offsets = {
